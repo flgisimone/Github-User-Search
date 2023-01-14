@@ -1,0 +1,342 @@
+a{
+    text-decoration: none;
+    color: cornflowerblue;
+}
+
+.container_UserTab{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    .wrapperUser{
+        width: 85%;
+        margin: auto;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 5px white;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+
+        .infoBox_primary{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 1rem;
+
+            img{
+                width: 6rem;
+                height: 6rem;
+                border-radius: 50%;
+            }
+
+            .subInfo_primary{
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                justify-content: center;
+
+                h2{
+                    color: white;
+                    font-size: 1rem;
+                }
+
+                a{
+                    color: cornflowerblue;
+                }
+
+                h4{
+                    color: white;
+                    font-size: 0.8rem;
+                    font-weight: 500;
+                    align-self: auto;
+                }
+            }
+
+            .bio{
+                width: 100%;
+                margin: auto;
+                color: white;
+                font-size: 1rem;
+            }
+        }
+
+        .stats{
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+            background: #0D1117;
+            box-shadow: 0 0 5px white;
+            border-radius: 0.5rem;
+            padding: 0.5rem 0;
+
+            .repoCard,
+            .followerCard,
+            .followingCard{
+                color: white;
+            }
+            
+            h5{
+                font-weight: 500;
+                font-size: 0.9rem;
+            }
+
+            span{
+                font-weight: 600;
+                font-size: 1.1rem;
+            }
+        }
+
+        .infoBox_secondary{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+
+            .companyCard,
+            .locationCard,
+            .emailCard,
+            .siteCard{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            i{
+                color: white;
+                width: 1rem;
+                text-align: center;
+                font-size: 1rem;
+            }
+
+            span{
+                color: white;
+            }
+        }
+
+        .joined{
+            align-self: center;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+
+    .container_UserTab{
+
+        .wrapperUser{
+            width: 55%;
+
+            .infoBox_primary{
+
+                img{
+                    width: 5rem;
+                    height: 5rem;
+                }
+            }
+
+            .stats{
+                gap: 0.5rem;
+
+                .repoCard,
+                .followerCard,
+                .followingCard{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .3rem;
+                }
+                
+                h5{
+                    font-size: 0.8rem;
+                }
+
+                span{
+                    font-size: 1rem;
+                }
+            }
+
+            .infoBox_secondary{
+
+                i{
+                    font-size: 1rem;
+                }
+
+                span{
+                    font-size: .95rem;
+                }
+
+                a{
+                    font-size: .95rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+
+    .container_UserTab{
+
+        .wrapperUser{
+            width: 45%;
+
+            .infoBox_primary{
+
+                img{
+                    width: 4.5rem;
+                    height: 4.5rem;
+                }
+            }
+
+            .stats{
+                gap: 0.5rem;
+
+                .repoCard,
+                .followerCard,
+                .followingCard{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .3rem;
+                }
+                
+                h5{
+                    font-size: 0.8rem;
+                }
+
+                span{
+                    font-size: 1rem;
+                }
+            }
+
+            .infoBox_secondary{
+
+                i{
+                    font-size: 1rem;
+                }
+
+                span{
+                    font-size: .95rem;
+                }
+
+                a{
+                    font-size: .95rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    .container_UserTab{
+
+        .wrapperUser{
+            width: 35%;
+
+            .infoBox_primary{
+
+                img{
+                    width: 4.5rem;
+                    height: 4.5rem;
+                }
+            }
+
+            .stats{
+                gap: 0.5rem;
+
+                .repoCard,
+                .followerCard,
+                .followingCard{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .3rem;
+                }
+                
+                h5{
+                    font-size: 0.8rem;
+                }
+
+                span{
+                    font-size: 1rem;
+                }
+            }
+
+            .infoBox_secondary{
+
+                i{
+                    font-size: 1rem;
+                }
+
+                span{
+                    font-size: .95rem;
+                }
+
+                a{
+                    font-size: .95rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .container_UserTab{
+
+        .wrapperUser{
+            width: 25%;
+
+            .infoBox_primary{
+
+                img{
+                    width: 4.5rem;
+                    height: 4.5rem;
+                }
+
+                
+            .bio{
+                font-size: .95rem;
+            }
+            }
+
+            .stats{
+                gap: 0.5rem;
+
+                .repoCard,
+                .followerCard,
+                .followingCard{
+                    display: flex;
+                    flex-direction: column;
+                    gap: .3rem;
+                }
+                
+                h5{
+                    font-size: 0.8rem;
+                }
+
+                span{
+                    font-size: 1rem;
+                }
+            }
+
+            .infoBox_secondary{
+
+                i{
+                    font-size: 0.95rem;
+                }
+
+                span{
+                    font-size: .90rem;
+                }
+
+                a{
+                    font-size: .90rem;
+                }
+            }
+        }
+    }
+}

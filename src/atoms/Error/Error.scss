@@ -1,0 +1,38 @@
+.error{
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+
+    .textError{
+        text-align: center;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .fa-face-sad-tear{
+        color: white;
+        text-align: center;
+        font-size: 5rem;
+    }
+
+    button{
+        align-self: center;
+        background-color: transparent;
+        border: none;
+        color: white;
+        font-size: 2.5rem;
+        animation: rotation 5s infinite linear;
+
+        @keyframes rotation {
+            from {
+              transform: rotate(0deg);
+            }
+            to {
+              transform: rotate(359deg);
+            }
+          }
+    }
+}

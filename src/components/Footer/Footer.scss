@@ -1,0 +1,17 @@
+footer{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.9rem;
+
+    span{
+        color: white;
+    }
+
+    i{
+        color: #00DCFF;
+    }
+}
