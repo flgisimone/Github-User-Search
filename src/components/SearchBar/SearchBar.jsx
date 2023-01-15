@@ -1,11 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 import "./SearchBar.scss"
 
 const SearchBar = (props) => {
 
-  const {inputChangeHandler, inputSubmitHandler, user} = props
+  const {inputChangeHandler, inputSubmitHandler} = props
  
-
   return (
     <section className="searchBar">
       <h1 className='heading'>Github's Users Search</h1>
@@ -18,4 +17,4 @@ const SearchBar = (props) => {
   )
 }
 
-export default SearchBar
+export default SearchBar      

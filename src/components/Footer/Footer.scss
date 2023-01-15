@@ -4,14 +4,31 @@ footer{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.25rem;
+    gap: 0.5rem;
     font-size: 0.9rem;
+    
+    .containerSocial{
+        display: flex;
+        gap: .5rem;
+        a{
+            font-size: 1rem;
+            i{
+                color: white;
+            }
+        }
+    }
 
     span{
         color: white;
+
+        .fa-copyright{
+            color: white;
+            font-size: .75rem;
+        }
     }
 
     i{
         color: #00DCFF;
     }
+
 }

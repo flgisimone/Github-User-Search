@@ -18,25 +18,22 @@ const UserTab = () => {
         console.log("onChange: " + user)
         console.log("onChange: " + urlAPI)
         console.log("onChange: " + urlAPIrepo)
-        console.log("onChange: " + urlAPI)
     }, [user])
 
     const inputSubmitHandler = (e) =>{
         e.preventDefault()
-        setUser(user)
+        setUser(user) //se metto e.target.value torna undefined
+
         console.log("\n" + "\n")
         console.log("onSubmit: " + user)
         console.log("onSubmit: " + urlAPI)
         console.log("onSubmit: " + urlAPIrepo)
-        console.log("onSubmit: " + urlAPI)
     }
    
     const urlAPI = `https://api.github.com/users/${user}`
-    console.log(urlAPI)
     const urlAPIrepo = `https://github.com/${user}?tab=repositories`
     const {data, error, loading} = CH_fetch(urlAPI)
 
-    
     if(error) return <Error />
     if(loading) return `Loading...`;
 
@@ -49,18 +46,11 @@ const UserTab = () => {
   return (
     
     <section className='container_UserTab'>
-        
-        {/*<section className="searchBar">
-            <h1 className='heading'>Github's Users Search</h1>
-            <form name="inputForm" className='inputForm' onSubmit={inputChangeHandler} >
-                <img src="https://seeklogo.com/images/G/github-logo-45146A3FBE-seeklogo.com.png" alt="logo-github" />
-                <input type="text" onChange={inputChangeHandler} placeholder="Search Github's User..."/>
-                <input type="submit" value="CERCA"></input>
-            </form>
-        </section>*/}
-        <SearchBar inputSubmitHandler={inputSubmitHandler} inputChangeHandler={inputChangeHandler} />
 
+        <SearchBar inputSubmitHandler={inputSubmitHandler} inputChangeHandler={inputChangeHandler} />
+ 
         <div className='wrapperUser'>
+            
             <div className="infoBox_primary">
                 <img src={data?.avatar_url} alt={data?.name} />
                 <div className="subInfo_primary">

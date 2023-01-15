@@ -27,7 +27,8 @@ const CH_fetch = (urlFetch) => {
   return {
     data,
     error,
-    loading
+    loading,
+    refetch: fetchData
   }
 }
 
