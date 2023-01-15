@@ -1,4 +1,5 @@
 import {useState, useEffect} from "react"
+import Error from "../atoms/Error/Error"
 
 const CH_fetch = (urlFetch) => {
 
@@ -14,6 +15,7 @@ const CH_fetch = (urlFetch) => {
         }
         catch(error){
             setError(error)
+            return <Error />
         }
         finally{
             setLoading(false)

@@ -12,21 +12,11 @@ const UserTab = () => {
     const inputChangeHandler = (e) =>{
         setUser(e.target.value)
     }
-    
-    useEffect(() => {
-        console.log("onChange: " + user)
-        console.log("onChange: " + urlAPI)
-        console.log("onChange: " + urlAPIrepo)
-    }, [user])
 
     const inputSubmitHandler = (e) =>{
         e.preventDefault()
         setUser(user)
         refetch()
-        console.log("\n" + "\n")
-        console.log("onSubmit: " + user)
-        console.log("onSubmit: " + urlAPI)
-        console.log("onSubmit: " + urlAPIrepo)
     }
 
     useEffect(() => {
