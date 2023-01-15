@@ -23,16 +23,20 @@ const UserTab = () => {
     const inputSubmitHandler = (e) =>{
         e.preventDefault()
         setUser(user) //se metto e.target.value torna undefined
-
+        refetch()
         console.log("\n" + "\n")
         console.log("onSubmit: " + user)
         console.log("onSubmit: " + urlAPI)
         console.log("onSubmit: " + urlAPIrepo)
     }
+
+    useEffect(() => {
+        setUser(user)
+    }, [])
    
     const urlAPI = `https://api.github.com/users/${user}`
     const urlAPIrepo = `https://github.com/${user}?tab=repositories`
-    const {data, error, loading} = CH_fetch(urlAPI)
+    const {data, error, loading, refetch} = CH_fetch(urlAPI)
 
     if(error) return <Error />
     if(loading) return `Loading...`;
@@ -47,7 +51,7 @@ const UserTab = () => {
     
     <section className='container_UserTab'>
 
-        <SearchBar inputSubmitHandler={inputSubmitHandler} inputChangeHandler={inputChangeHandler} />
+        <SearchBar  inputSubmitHandler={inputSubmitHandler} inputChangeHandler={inputChangeHandler} />
  
         <div className='wrapperUser'>
             
