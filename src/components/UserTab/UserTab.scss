@@ -20,7 +20,7 @@ a{
 
         .infoBox_primary{
             display: flex;
-            flex-wrap: wrap;
+            
             align-items: center;
             gap: 1rem;
 
@@ -52,13 +52,13 @@ a{
                     align-self: auto;
                 }
             }
-
-            .bio{
-                width: 100%;
-                margin: auto;
-                color: white;
-                font-size: 1rem;
-            }
+        }
+        
+        .bio{
+            width: 100%;
+            margin: auto;
+            color: white;
+            font-size: 1rem;
         }
 
         .stats{
@@ -137,6 +137,10 @@ a{
                     width: 5rem;
                     height: 5rem;
                 }
+
+                .subInfo_primary{
+                    width: 65%;
+                }
             }
 
             .stats{
@@ -187,8 +191,8 @@ a{
             .infoBox_primary{
 
                 img{
-                    width: 4.5rem;
-                    height: 4.5rem;
+                    width: 6rem;
+                    height: 6rem;
                 }
             }
 
@@ -240,8 +244,8 @@ a{
             .infoBox_primary{
 
                 img{
-                    width: 4.5rem;
-                    height: 4.5rem;
+                    width: 6rem;
+                    height: 6rem;
                 }
             }
 
@@ -293,14 +297,9 @@ a{
             .infoBox_primary{
 
                 img{
-                    width: 4.5rem;
-                    height: 4.5rem;
+                    width: 6rem;
+                    height: 6rem;
                 }
-
-                
-            .bio{
-                font-size: .95rem;
-            }
             }
 
             .stats{

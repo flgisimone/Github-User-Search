@@ -51,8 +51,9 @@ const UserTab = () => {
                     <a href={data?.html_url}>{"@" + data?.login}</a>
                     <h4 className='joined'>{"Last Update at " + updateDate}</h4>
                 </div>
-                <p className='bio'>{data?.bio}</p>
             </div>
+
+            <p className='bio'>{data?.bio}</p>
 
             <div className="stats">
                 <div className="repoCard">
