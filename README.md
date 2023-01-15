@@ -16,8 +16,11 @@ Creare un'applicazione che all'input di un username, appartente ad un utente reg
 
 <h4> Components </h4>
 <li> SearchBar --> Utilizzato per immettere l'input necessario a cambiare l'endpoint dell'API </li>
+<img src="./img_SearchBar.png">
 <li> UserTab --> Utilizzato per rimandare a display tutte le informazioni relative all'utente in seguito all'username inserito </li>
+<img src="./img_UserTab.png">
 <li> Footer </li>
+<img src="./img_Footer.png">
 
 <h3> Altri file </h3>
 <li> CH_fetch --> Utilizzato per dividere la logica della fetch e importarla direttamente all'interno del componente UserTab </li>
