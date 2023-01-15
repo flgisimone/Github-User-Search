@@ -10,7 +10,6 @@ const UserTab = () => {
     const [user, setUser] = useState("github")
 
     const inputChangeHandler = (e) =>{
-        //console.log("Alfio")
         setUser(e.target.value)
     }
     
@@ -22,7 +21,7 @@ const UserTab = () => {
 
     const inputSubmitHandler = (e) =>{
         e.preventDefault()
-        setUser(user) //se metto e.target.value torna undefined
+        setUser(user)
         refetch()
         console.log("\n" + "\n")
         console.log("onSubmit: " + user)
