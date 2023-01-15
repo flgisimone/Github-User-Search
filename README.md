@@ -11,16 +11,21 @@ Creare un'applicazione che all'input di un username, appartente ad un utente reg
 
 <h3> Components e Atoms utilizzati </h3>
 
-<h4> Atoms </h4>
-<li> Error --> Utilizzato per rimandare un messaggio a display per il non corretto funzionamento dell'API </li>
-
 <h4> Components </h4>
 <li> SearchBar --> Utilizzato per immettere l'input necessario a cambiare l'endpoint dell'API </li>
+<br>
 <img src="./img_SearchBar.png">
 <li> UserTab --> Utilizzato per rimandare a display tutte le informazioni relative all'utente in seguito all'username inserito </li>
+<br>
 <img src="./img_UserTab.png">
+<br>
 <li> Footer </li>
 <img src="./img_Footer.png">
+
+<h4> Atoms </h4>
+<li> Error --> Utilizzato per rimandare un messaggio a display per il non corretto funzionamento dell'API </li>
+<br>
+<img src="./img_Error.png">
 
 <h3> Altri file </h3>
 <li> CH_fetch --> Utilizzato per dividere la logica della fetch e importarla direttamente all'interno del componente UserTab </li>
