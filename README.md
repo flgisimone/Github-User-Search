@@ -18,8 +18,8 @@ Creare un'applicazione che all'input di un username, appartente ad un utente reg
 <li> UserTab --> Utilizzato per rimandare a display tutte le informazioni relative all'utente in seguito all'username inserito </li>
 <br>
 <img src="./img_UserTab.png">
-<br>
 <li> Footer </li>
+<br>
 <img src="./img_Footer.png">
 
 <h4> Atoms </h4>
