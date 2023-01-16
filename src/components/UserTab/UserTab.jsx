@@ -1,7 +1,7 @@
-import CH_fetch from '../../CH_fetch/CH_fetch'
+import CH_fetch from '../../utils/CH_fetch/CH_fetch'
 import { useState, useEffect } from 'react'
 import SearchBar from '../SearchBar/SearchBar'
-import Error from "../../atoms/Error/Error"
+import Error from "../../utils/Error/Error"
 
 import "./UserTab.scss"
 

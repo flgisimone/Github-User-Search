@@ -1,6 +1,7 @@
 a{
     text-decoration: none;
     color: cornflowerblue;
+    width: fit-content;
 }
 
 .container_UserTab{
@@ -84,6 +85,10 @@ a{
             span{
                 font-weight: 600;
                 font-size: 1.1rem;
+            }
+
+            a{
+                align-self: center;
             }
         }
 

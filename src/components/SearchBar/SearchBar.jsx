@@ -1,6 +1,6 @@
 import React from 'react'
 import "./SearchBar.scss"
-import CH_fetch from "../../CH_fetch/CH_fetch"
+import CH_fetch from "../../utils/CH_fetch/CH_fetch"
 
 const SearchBar = (props) => {
 
