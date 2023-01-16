@@ -1,4 +1,6 @@
 import {useState, useEffect} from "react"
+import axios from "axios"
+import Error from "../Error/Error"
 
 const CH_fetch = (urlFetch) => {
 
@@ -8,13 +10,8 @@ const CH_fetch = (urlFetch) => {
 
     const fetchData = async() => {
         try{
-            const response = await fetch(urlFetch)
-            if(response.ok){
-                const data = await response.json()
-                setData(data)
-            }else{
-                setError(response.statusText)
-            }
+            const response = await axios(urlFetch)
+            setData(response.data)
         }
         catch(error){
             setError(error)
@@ -28,7 +25,7 @@ const CH_fetch = (urlFetch) => {
         fetchData()
     }, [])
 
-  return {
+  return{
     data,
     error,
     loading,

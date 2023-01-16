@@ -10,7 +10,7 @@ const Error = () => {
   return (
     <div className='error'>
         <i className="fa-regular fa-face-sad-tear"></i>
-        <span className='textError'>Errore nello stabilire la connessione con il server. Prova a ricaricare la pagina.</span>
+        <span className='textError'>L'utente non è stato trovato o non è stato possibile stabilire la connessione con il server. Ricarica la pagina.</span>
         <button onClick={refreshPage}><i className="fa-solid fa-rotate-right"></i></button>
     </div>
   )
