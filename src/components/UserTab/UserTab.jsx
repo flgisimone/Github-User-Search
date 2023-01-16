@@ -17,6 +17,7 @@ const UserTab = () => {
         e.preventDefault()
         setUser(user)
         refetch()
+        
     }
 
     useEffect(() => {
@@ -39,11 +40,9 @@ const UserTab = () => {
   return (
     
     <section className='container_UserTab'>
-
         <SearchBar  inputSubmitHandler={inputSubmitHandler} inputChangeHandler={inputChangeHandler} />
  
         <div className='wrapperUser'>
-            
             <div className="infoBox_primary">
                 <img src={data?.avatar_url} alt={data?.name} />
                 <div className="subInfo_primary">

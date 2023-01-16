@@ -1,5 +1,4 @@
 import {useState, useEffect} from "react"
-import Error from "../atoms/Error/Error"
 
 const CH_fetch = (urlFetch) => {
 
@@ -9,13 +8,16 @@ const CH_fetch = (urlFetch) => {
 
     const fetchData = async() => {
         try{
-            const data = await fetch(urlFetch)
-            .then(res => res.json())
-            setData(data)
+            const response = await fetch(urlFetch)
+            if(response.ok){
+                const data = await response.json()
+                setData(data)
+            }else{
+                setError(response.statusText)
+            }
         }
         catch(error){
             setError(error)
-            return <Error />
         }
         finally{
             setLoading(false)
