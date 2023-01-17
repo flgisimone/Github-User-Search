@@ -23,7 +23,7 @@ Creare un'applicazione che all'input di un username, appartente ad un utente reg
 <img src="./img_Footer.png">
 
 <h4> Atoms </h4>
-<li> Error --> Utilizzato per rimandare un messaggio a display per il non corretto funzionamento dell'API </li>
+<li> Error --> Utilizzato per rimandare un messaggio a display per il non corretto funzionamento dell'API o dell'utente non trovato</li>
 <br>
 <img src="./img_Error.png">
 

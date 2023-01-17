@@ -17,7 +17,6 @@ const UserTab = () => {
         e.preventDefault()
         setUser(user)
         refetch()
-        
     }
 
     useEffect(() => {
@@ -26,7 +25,7 @@ const UserTab = () => {
    
     const urlAPI = `https://api.github.com/users/${user}`
     const urlAPIrepo = `https://github.com/${user}?tab=repositories`
-    const {data, error, loading, refetch} = CH_fetch(urlAPI)
+    const {data, error, serverError, loading, refetch} = CH_fetch(urlAPI)
 
     if(error) return <Error />
     if(loading) return `Loading...`;
@@ -37,12 +36,13 @@ const UserTab = () => {
     let joinedDate = data?.created_at.substring(0, 10)
     joinedDate = joinedDate?.split("-").reverse().join("-");
 
+
   return (
     
     <section className='container_UserTab'>
-        <SearchBar  inputSubmitHandler={inputSubmitHandler} inputChangeHandler={inputChangeHandler} />
+        <SearchBar inputSubmitHandler={inputSubmitHandler} inputChangeHandler={inputChangeHandler} />
  
-        <div className='wrapperUser'>
+        <div className={error ? 'wrapperUser hidden' : 'wrapperUser show'}>
             <div className="infoBox_primary">
                 <img src={data?.avatar_url} alt={data?.name} />
                 <div className="subInfo_primary">

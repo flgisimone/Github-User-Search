@@ -4,10 +4,20 @@ a{
     width: fit-content;
 }
 
+.show{
+    display: flex;
+    justify-content: center;
+}
+
+.hidden{
+    display: none;
+}
+
 .container_UserTab{
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    color: white;
 
     .wrapperUser{
         width: 85%;
@@ -15,7 +25,6 @@ a{
         border-radius: 0.5rem;
         box-shadow: 0 0 5px white;
         padding: 1rem;
-        display: flex;
         flex-direction: column;
         gap: 1.5rem;
 

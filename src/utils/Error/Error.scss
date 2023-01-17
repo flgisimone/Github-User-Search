@@ -36,3 +36,35 @@
           }
     }
 }
+
+@media screen and (min-width: 600px) {
+
+  .error{
+    width: 85%;
+  }
+  
+}
+
+@media screen and (min-width: 768px) {
+
+  .error{
+    width: 70%;
+  }
+  
+}
+
+@media screen and (min-width: 900px) {
+
+  .error{
+    width: 45%;
+  }
+  
+}
+
+@media screen and (min-width: 1200px) {
+
+  .error{
+    width: 35%;
+  }
+  
+}
