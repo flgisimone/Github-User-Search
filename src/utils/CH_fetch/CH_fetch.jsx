@@ -6,14 +6,10 @@ const CH_fetch = (urlFetch) => {
     const [data, setData] = useState(null)
     const [loading, setLoading] = useState(null)
     const [error, setError] = useState(false)
-    const [errorServer, setErrorServer] = useState(false)
-
-    const token = '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';
-    const headers = { 'Authorization': `token ${token}` };
 
     const fetchData = async() => {
         try{
-            const response = await axios(urlFetch, {headers})
+            const response = await axios(urlFetch)
             setData(response.data)
         }
         catch(error){

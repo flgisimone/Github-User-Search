@@ -25,7 +25,7 @@ const UserTab = () => {
    
     const urlAPI = `https://api.github.com/users/${user}`
     const urlAPIrepo = `https://github.com/${user}?tab=repositories`
-    const {data, error, serverError, loading, refetch} = CH_fetch(urlAPI)
+    const {data, error, loading, refetch} = CH_fetch(urlAPI)
 
     if(error) return <Error />
     if(loading) return `Loading...`;
