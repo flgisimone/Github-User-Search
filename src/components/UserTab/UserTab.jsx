@@ -1,6 +1,7 @@
 import CH_fetch from '../../utils/CH_fetch/CH_fetch'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import SearchBar from '../SearchBar/SearchBar'
+import Loading from '../../Loading/Loading'
 import Error from "../../utils/Error/Error"
 
 import "./UserTab.scss"
@@ -8,27 +9,13 @@ import "./UserTab.scss"
 const UserTab = () => {
 
     const [user, setUser] = useState("github")
-
-    const inputChangeHandler = (e) =>{
-        setUser(e.target.value)
-    }
-
-    const inputSubmitHandler = (e) =>{
-        e.preventDefault()
-        setUser(user)
-        refetch()
-    }
-
-    useEffect(() => {
-        setUser(user)
-    }, [])
    
     const urlAPI = `https://api.github.com/users/${user}`
     const urlAPIrepo = `https://github.com/${user}?tab=repositories`
     const {data, error, loading, refetch} = CH_fetch(urlAPI)
 
     if(error) return <Error />
-    if(loading) return `Loading...`;
+    if(loading) return <Loading />
 
     let updateDate = data?.updated_at.substring(0, 10)
     updateDate = updateDate?.split("-").reverse().join("-");
@@ -40,7 +27,7 @@ const UserTab = () => {
   return (
     
     <section className='container_UserTab'>
-        <SearchBar inputSubmitHandler={inputSubmitHandler} inputChangeHandler={inputChangeHandler} />
+        <SearchBar updateState={setUser} executionFunction={refetch} />
  
         <div className={error ? 'wrapperUser hidden' : 'wrapperUser show'}>
             <div className="infoBox_primary">
